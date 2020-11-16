@@ -116,10 +116,10 @@ p {
 }
 a {
   text-decoration: none;
-  color: #ff9a9e;
+  color: #9fb8d1;
 }
 a:hover {
-  color: #9fb8d1;
+  color: #ff9a9e;
 }
 .icon-icon_01_sunny:before {
   content: "\e900";
