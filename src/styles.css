@@ -2,7 +2,7 @@ h1 {
   color: #ffffff;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 40px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -10,7 +10,7 @@ h2 {
   color: #ffffff;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 40px;
   margin-top: 70px;
   margin-bottom: 5px;
 }
@@ -27,7 +27,7 @@ h4 {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  margin-top: -30px;
+  margin-top: -60px;
 }
 ul {
   list-style-type: none;
@@ -38,14 +38,14 @@ h5 {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  margin-top: -30px;
+  margin-top: -60px;
 }
 h6 {
   color: #ffffff;
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 .container {
   margin-top: 10px;
@@ -62,7 +62,7 @@ h6 {
   align-items: center;
 }
 .form-control {
-  width: 320px;
+  width: 350px;
   border-radius: 8px;
   display: inline;
   height: 30px;
@@ -94,6 +94,12 @@ h6 {
 .detail {
   margin-top: 35px;
   margin-bottom: 35px;
+}
+.float {
+  font-size: 16px;
+  display: inline;
+  position: relative;
+  top: -18px;
 }
 .daily {
   margin-top: 35px;

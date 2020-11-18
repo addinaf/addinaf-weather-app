@@ -1,3 +1,4 @@
+// DATE FUNCTION
 let dateElement = document.querySelector("#date");
 let currentDay = new Date();
 let date = currentDay.getDate();
@@ -45,13 +46,14 @@ if (minutes < 10) {
 
 timeElement.innerHTML = `${hours}:${minutes}`;
 
+// LOCATION FUNCTION
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name.toUpperCase();
   document.querySelector("#city-small").innerHTML = response.data.name;
   let mainTemperature = Math.round(response.data.main.temp);
   document.querySelector(
     "#main-temperature"
-  ).innerHTML = `${mainTemperature}°C`;
+  ).innerHTML = `${mainTemperature}`;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -65,8 +67,8 @@ function displayWeather(response) {
   document.querySelector("#min-temp").innerHTML = Math.round(
     response.data.main.temp_min
   );
+  document.querySelector("#situation").innerHTML = response.data.weather.main;
 }
-
 function handleSubmit(event) {
   event.preventDefault();
   let units = "metric";
