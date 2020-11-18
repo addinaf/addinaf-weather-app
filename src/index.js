@@ -59,7 +59,7 @@ function displayWeather(response) {
     response.data.wind.speed
   );
   document.querySelector("#real-feel").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.main.feels_like
   );
   document.querySelector("#max-temp").innerHTML = Math.round(
     response.data.main.temp_max
@@ -67,8 +67,9 @@ function displayWeather(response) {
   document.querySelector("#min-temp").innerHTML = Math.round(
     response.data.main.temp_min
   );
-  document.querySelector("#situation").innerHTML = response.data.weather.main;
+  document.querySelector("#situation").innerHTML = response.data.weather[0].main.toUpperCase();
 }
+
 function handleSubmit(event) {
   event.preventDefault();
   let units = "metric";
