@@ -67,7 +67,57 @@ function displayWeather(response) {
   document.querySelector("#min-temp").innerHTML = Math.round(
     response.data.main.temp_min
   );
-  document.querySelector("#situation").innerHTML = response.data.weather[0].main.toUpperCase();
+
+  let weatherSituation = response.data.weather[0].main;
+  if(weatherSituation === "Clear") {
+document.querySelector("#situation").innerHTML = "SUNNY"
+  }
+  if(weatherSituation === "Clouds") {
+    document.querySelector("#situation").innerHTML = "CLOUDY"
+  }
+  if(weatherSituation === "Mist") {
+    document.querySelector("#situation").innerHTML = "MISTY"
+  }
+  if(weatherSituation === "Smoke") {
+    document.querySelector("#situation").innerHTML = "SMOKEY"
+  }
+  if(weatherSituation === "Haze") {
+    document.querySelector("#situation").innerHTML = "HAZY"
+  }
+  if(weatherSituation === "Dust") {
+    document.querySelector("#situation").innerHTML = "DUSTY"
+  }
+  if(weatherSituation === "Fog") {
+    document.querySelector("#situation").innerHTML = "FOGGY"
+  }
+  if(weatherSituation === "Sand") {
+    document.querySelector("#situation").innerHTML = "DUSTY"
+  }
+  if(weatherSituation === "Dust") {
+    document.querySelector("#situation").innerHTML = "DUSTY"
+  }
+  if(weatherSituation === "Ash") {
+    document.querySelector("#situation").innerHTML = "ASHY"
+  }
+  if(weatherSituation === "Squall") {
+    document.querySelector("#situation").innerHTML = "WINDY"
+  }
+  if(weatherSituation === "Tornado") {
+    document.querySelector("#situation").innerHTML = "TORNADO"
+  }
+  if(weatherSituation === "Snow") {
+    document.querySelector("#situation").innerHTML = "SNOWY"
+  }
+  if(weatherSituation === "Rain") {
+    document.querySelector("#situation").innerHTML = "RAINY"
+  }
+  if(weatherSituation === "Drizzle") {
+    document.querySelector("#situation").innerHTML = "DRIZZLY"
+  }
+  if(weatherSituation === "Thunderstorm") {
+    document.querySelector("#situation").innerHTML = "THUNDERSTORM"
+  }
+  //document.querySelector("#situation").innerHTML = weatherSituation.toUpperCase();
 }
 
 function handleSubmit(event) {
