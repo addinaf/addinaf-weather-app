@@ -119,6 +119,7 @@ document.querySelector("#situation").innerHTML = "SUNNY"
   }
   //document.querySelector("#situation").innerHTML = weatherSituation.toUpperCase();
 }
+//
 
 function handleSubmit(event) {
   event.preventDefault();

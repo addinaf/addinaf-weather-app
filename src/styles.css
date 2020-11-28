@@ -127,6 +127,8 @@ a {
 a:hover {
   color: #ff9a9e;
 }
+
+// my first icon trial below (it used to work before)
 .icon-icon_01_sunny:before {
   content: "\e900";
   font-size: 35px;
@@ -158,4 +160,50 @@ img {
   object-fit: cover;
   margin-top: -80px;
   margin-right: -40px;
+}
+
+//icomoon trial but doesn't work
+
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?ge05di");
+  src: url("fonts/icomoon.eot?ge05di#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?ge05di") format("truetype"),
+    url("fonts/icomoon.woff?ge05di") format("woff"),
+    url("fonts/icomoon.svg?ge05di#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon_01_sunny:before {
+  content: "\e900";
+}
+.icon-icon_02_cloudy:before {
+  content: "\e901";
+}
+.icon-icon_03_partly-cloudy:before {
+  content: "\e902";
+}
+.icon-icon_04_rainy:before {
+  content: "\e903";
+}
+.icon-icon_05_snowy:before {
+  content: "\e904";
 }
