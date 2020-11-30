@@ -132,6 +132,10 @@ p {
   color: #ff9a9e;
   margin-bottom: 30px;
 }
+#fahrenheit-link {
+  text-decoration: none;
+  color: #ffffff;
+}
 a {
   text-decoration: none;
   color: #9fb8d1;

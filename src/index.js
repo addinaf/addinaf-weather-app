@@ -141,3 +141,13 @@ function searchCity(city) {
 }
 
 searchCity("Milan");
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (14 * 9 / 5) + 32;
+  let mainTemperatureFahrenheit = document.querySelector("#main-temperature");
+  mainTemperatureFahrenheit = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit)
