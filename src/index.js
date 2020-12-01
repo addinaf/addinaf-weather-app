@@ -144,9 +144,9 @@ searchCity("Milan");
 
 function displayFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (14 * 9 / 5) + 32;
-  let mainTemperatureFahrenheit = document.querySelector("#main-temperature");
-  mainTemperatureFahrenheit.innerHTML = Math.round(fahrenheitTemperature);
+  mainFahrenheitTemperature = document.querySelector("main-temperature");
+  let fahrenheitTemperature = (mainFahrenheitTemperature.innerHTML * 9 / 5) + 32;
+  mainFahrenheitTemperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
