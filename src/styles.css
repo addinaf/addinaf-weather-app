@@ -175,6 +175,12 @@ p {
   text-decoration: none;
   color: #ffffff;
 }
+
+#celcius-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 a {
   text-decoration: none;
   color: #9fb8d1;

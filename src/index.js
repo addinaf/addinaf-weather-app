@@ -68,6 +68,8 @@ function displayWeather(response) {
     response.data.main.temp_min
   );
 
+  celciusTemperature = response.data.main.temp;
+
   let weatherSituation = response.data.weather[0].main;
   if(weatherSituation === "Clear") {
 document.querySelector("#situation").innerHTML = "SUNNY"
@@ -140,14 +142,25 @@ function searchCity(city) {
   axios.get(apiUrl).then(displayWeather);
 }
 
-searchCity("Milan");
-
 function displayFahrenheit(event) {
   event.preventDefault();
-  mainFahrenheitTemperature = document.querySelector("main-temperature");
-  let fahrenheitTemperature = (mainFahrenheitTemperature.innerHTML * 9 / 5) + 32;
+  mainFahrenheitTemperature = document.querySelector("#main-temperature");
+  let fahrenheitTemperature = (celciusTemperature * 9 / 5) + 32;
   mainFahrenheitTemperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
+function displayCelcius(event) {
+  event.preventDefault();
+  mainCelciusTemperature = document.querySelector("#main-temperature");
+  mainCelciusTemperature.innerHTML = Math.round(response.data.main.temp);
+}
+
+let celciusTemperature = null;
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheit)
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", displayCelcius);
+
+searchCity("Milan");
