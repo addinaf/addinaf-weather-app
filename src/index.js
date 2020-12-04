@@ -72,7 +72,8 @@ function displayWeather(response) {
 
   let weatherSituation = response.data.weather[0].main;
   if(weatherSituation === "Clear") {
-document.querySelector("#situation").innerHTML = "SUNNY"
+document.querySelector("#situation").innerHTML = "SUNNY";
+document.querySelector("#main-image").setAttribute("src", "img/img_01_sunny.png");
   }
   if(weatherSituation === "Clouds") {
     document.querySelector("#situation").innerHTML = "CLOUDY"
@@ -111,7 +112,8 @@ document.querySelector("#situation").innerHTML = "SUNNY"
     document.querySelector("#situation").innerHTML = "SNOWY"
   }
   if(weatherSituation === "Rain") {
-    document.querySelector("#situation").innerHTML = "RAINY"
+    document.querySelector("#situation").innerHTML = "RAINY";
+    document.querySelector("#main-image").setAttribute("src", img/img_04_rainy.png);
   }
   if(weatherSituation === "Drizzle") {
     document.querySelector("#situation").innerHTML = "DRIZZLY"
@@ -152,7 +154,7 @@ function displayFahrenheit(event) {
 function displayCelcius(event) {
   event.preventDefault();
   mainCelciusTemperature = document.querySelector("#main-temperature");
-  mainCelciusTemperature.innerHTML = Math.round(response.data.main.temp);
+  mainCelciusTemperature.innerHTML = Math.round(celciusTemperature);
 }
 
 let celciusTemperature = null;

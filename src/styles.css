@@ -181,6 +181,13 @@ p {
   color: #ffffff;
 }
 
+#fahrenheit-link: hover {
+  color: #ff9a9e;
+}
+#celcius-link:hover {
+  color: #ff9a9e;
+}
+
 a {
   text-decoration: none;
   color: #9fb8d1;
