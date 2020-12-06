@@ -76,50 +76,65 @@ document.querySelector("#situation").innerHTML = "SUNNY";
 document.querySelector("#main-image").setAttribute("src", "img/img_01_sunny.png");
   }
   if(weatherSituation === "Clouds") {
-    document.querySelector("#situation").innerHTML = "CLOUDY"
+    document.querySelector("#situation").innerHTML = "CLOUDY";
+        document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
   }
   if(weatherSituation === "Mist") {
-    document.querySelector("#situation").innerHTML = "MISTY"
+    document.querySelector("#situation").innerHTML = "MISTY";
+    document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
   }
   if(weatherSituation === "Smoke") {
     document.querySelector("#situation").innerHTML = "SMOKEY"
+        document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
   }
   if(weatherSituation === "Haze") {
-    document.querySelector("#situation").innerHTML = "HAZY"
+    document.querySelector("#situation").innerHTML = "HAZY";
+        document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
   }
   if(weatherSituation === "Dust") {
-    document.querySelector("#situation").innerHTML = "DUSTY"
+    document.querySelector("#situation").innerHTML = "DUSTY";
+        document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
   }
   if(weatherSituation === "Fog") {
-    document.querySelector("#situation").innerHTML = "FOGGY"
+    document.querySelector("#situation").innerHTML = "FOGGY";
+        document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
   }
   if(weatherSituation === "Sand") {
-    document.querySelector("#situation").innerHTML = "DUSTY"
+    document.querySelector("#situation").innerHTML = "DUSTY";
+        document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
   }
   if(weatherSituation === "Dust") {
-    document.querySelector("#situation").innerHTML = "DUSTY"
+    document.querySelector("#situation").innerHTML = "DUSTY";
+        document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
   }
   if(weatherSituation === "Ash") {
-    document.querySelector("#situation").innerHTML = "ASHY"
+    document.querySelector("#situation").innerHTML = "ASHY";
+        document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
   }
   if(weatherSituation === "Squall") {
-    document.querySelector("#situation").innerHTML = "WINDY"
+    document.querySelector("#situation").innerHTML = "WINDY";
+        document.querySelector("#main-image").setAttribute("src", "img/img_03_partly cloudy.png");
   }
   if(weatherSituation === "Tornado") {
-    document.querySelector("#situation").innerHTML = "TORNADO"
+    document.querySelector("#situation").innerHTML = "TORNADO";
+        document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
   }
   if(weatherSituation === "Snow") {
-    document.querySelector("#situation").innerHTML = "SNOWY"
+    document.querySelector("#situation").innerHTML = "SNOWY";
+        document.querySelector("#main-image").setAttribute("src", "img/img_05_snowy.png");
   }
   if(weatherSituation === "Rain") {
     document.querySelector("#situation").innerHTML = "RAINY";
-    document.querySelector("#main-image").setAttribute("src", img/img_04_rainy.png);
+    document.querySelector("#main-image").setAttribute("src", "img/img_04_rainy.png");
   }
   if(weatherSituation === "Drizzle") {
-    document.querySelector("#situation").innerHTML = "DRIZZLY"
+    document.querySelector("#situation").innerHTML = "DRIZZLY";
+    document.querySelector("#main-image").setAttribute("src", "img/img_04_rainy.png");
+
   }
   if(weatherSituation === "Thunderstorm") {
-    document.querySelector("#situation").innerHTML = "THUNDERSTORM"
+    document.querySelector("#situation").innerHTML = "THUNDERSTORM";
+    document.querySelector("#main-image").setAttribute("src", "img/img_04_rainy.png");
   }
   //document.querySelector("#situation").innerHTML = weatherSituation.toUpperCase();
 }
