@@ -53,7 +53,7 @@ h1 {
   color: #ffffff;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 36px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -61,7 +61,7 @@ h2 {
   color: #ffffff;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 36px;
   margin-top: 70px;
   margin-bottom: 5px;
 }
@@ -69,7 +69,7 @@ h3 {
   color: #ffffff;
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -150,7 +150,7 @@ h6 {
   font-size: 16px;
   display: inline;
   position: relative;
-  top: -18px;
+  top: 0px;
 }
 .daily {
   margin-top: 35px;
@@ -171,22 +171,6 @@ p {
   color: #ff9a9e;
   margin-bottom: 30px;
 }
-#fahrenheit-link {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-#celcius-link {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-#fahrenheit-link:hover {
-  color: #ff9a9e;
-}
-#celcius-link:hover {
-  color: #ff9a9e;
-}
 
 a {
   text-decoration: none;
@@ -195,11 +179,28 @@ a {
 a:hover {
   color: #ff9a9e;
 }
-
 img {
   width: 400px;
   height: 400px;
   object-fit: cover;
   margin-top: -80px;
   margin-right: -40px;
+}
+#fahrenheit-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+#celcius-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.active {
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 36px;
+  text-decoration: none;
+  cursor: default;
+}
+.active :hover {
+  color: #ff9a9e;
 }

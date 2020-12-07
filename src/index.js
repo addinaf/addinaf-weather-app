@@ -77,7 +77,7 @@ document.querySelector("#main-image").setAttribute("src", "img/img_01_sunny.png"
   }
   if(weatherSituation === "Clouds") {
     document.querySelector("#situation").innerHTML = "CLOUDY";
-        document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
+    document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
   }
   if(weatherSituation === "Mist") {
     document.querySelector("#situation").innerHTML = "MISTY";
@@ -162,12 +162,16 @@ function searchCity(city) {
 function displayFahrenheit(event) {
   event.preventDefault();
   mainFahrenheitTemperature = document.querySelector("#main-temperature");
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celciusTemperature * 9 / 5) + 32;
   mainFahrenheitTemperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function displayCelcius(event) {
   event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   mainCelciusTemperature = document.querySelector("#main-temperature");
   mainCelciusTemperature.innerHTML = Math.round(celciusTemperature);
 }
