@@ -69,6 +69,9 @@ function displayWeather(response) {
   );
 
   celciusTemperature = response.data.main.temp;
+  celciusTemperatureReal = response.data.main.feels_like;
+  celciusTemperatureMax = response.data.main.temp_max;
+  celciusTemperatureMin = response.data.main.temp_min;
 
   let weatherSituation = response.data.weather[0].main;
   if(weatherSituation === "Clear") {
@@ -165,7 +168,13 @@ function displayFahrenheit(event) {
   celciusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celciusTemperature * 9 / 5) + 32;
+  let fahrenheitTemperatureReal = (celciusTemperatureReal * 9 / 5) + 32;
+  let fahrenheitTemperatureMax = (celciusTemperatureMax * 9 / 5) + 32;
+  let fahrenheitTemperatureMin = (celciusTemperatureMin * 9 / 5 ) + 32;
   mainFahrenheitTemperature.innerHTML = Math.round(fahrenheitTemperature);
+document.querySelector("#real-feel").innerHTML = Math.round(fahrenheitTemperatureReal);
+ document.querySelector("#max-temp").innerHTML = Math.round(fahrenheitTemperatureMax);
+ document.querySelector("#min-temp").innerHTML = Math.round(fahrenheitTemperatureMin);
 }
 
 function displayCelcius(event) {
@@ -174,9 +183,18 @@ function displayCelcius(event) {
   fahrenheitLink.classList.remove("active");
   mainCelciusTemperature = document.querySelector("#main-temperature");
   mainCelciusTemperature.innerHTML = Math.round(celciusTemperature);
+  celciusReal = document.querySelector("#real-feel");
+  celciusReal.innerHTML = Math.round(celciusTemperatureReal);
+  celciusMax = document.querySelector("#max-temp");
+  celciusMax.innerHTML = Math.round(celciusTemperatureMax);
+  celciusMin = document.querySelector("#min-temp");
+  celciusMin.innerHTML = Math.round(celciusTemperatureMin);
 }
 
 let celciusTemperature = null;
+let celciusTemperatureReal = null;
+let celciusTemperatureMax = null;
+let celciusTemperatureMin = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
