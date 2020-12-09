@@ -116,11 +116,11 @@ document.querySelector("#main-image").setAttribute("src", "img/img_01_sunny.png"
   }
   if(weatherSituation === "Squall") {
     document.querySelector("#situation").innerHTML = "WINDY";
-        document.querySelector("#main-image").setAttribute("src", "img/img_03_partly cloudy.png");
+        document.querySelector("#main-image").setAttribute("src", "img/img_06_windy.png");
   }
   if(weatherSituation === "Tornado") {
     document.querySelector("#situation").innerHTML = "TORNADO";
-        document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
+        document.querySelector("#main-image").setAttribute("src", "img/img_06_windy.png");
   }
   if(weatherSituation === "Snow") {
     document.querySelector("#situation").innerHTML = "SNOWY";
