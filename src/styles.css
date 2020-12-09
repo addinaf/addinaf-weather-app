@@ -146,7 +146,7 @@ h6 {
   max-width: 500px;
   margin-bottom: 10px;
   overflow: hidden;
-  background-image: linear-gradient(to top, #9fb8d1 0%, #b7b7b7 70%);
+  background-image: linear-gradient(to top, #b7b7b7 0%, #9fb8d1 70%);
   margin-right: auto;
   margin-left: auto;
 }
