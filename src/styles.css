@@ -48,7 +48,11 @@
   font-size: 35px;
   font-weight: 500;
 }
-
+.icon-icon_06_windy:before {
+  content: "\e905";
+  font-size: 35px;
+  font-weight: 500;
+}
 h1 {
   color: #ffffff;
   font-family: "Quicksand", sans-serif;
