@@ -81,7 +81,7 @@ document.querySelector("#main-image").setAttribute("src", "img/img_01_sunny.png"
   if(weatherSituation === "Clouds") {
     document.querySelector("#situation").innerHTML = "CLOUDY";
     document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
-  }
+}
   if(weatherSituation === "Mist") {
     document.querySelector("#situation").innerHTML = "MISTY";
     document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
@@ -101,23 +101,23 @@ document.querySelector("#main-image").setAttribute("src", "img/img_01_sunny.png"
   if(weatherSituation === "Fog") {
     document.querySelector("#situation").innerHTML = "FOGGY";
         document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
-  }
+      }
   if(weatherSituation === "Sand") {
     document.querySelector("#situation").innerHTML = "DUSTY";
         document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
-  }
+    }
   if(weatherSituation === "Dust") {
     document.querySelector("#situation").innerHTML = "DUSTY";
         document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
-  }
+}
   if(weatherSituation === "Ash") {
     document.querySelector("#situation").innerHTML = "ASHY";
         document.querySelector("#main-image").setAttribute("src", "img/img_02_cloudy.png");
-  }
+    }
   if(weatherSituation === "Squall") {
     document.querySelector("#situation").innerHTML = "WINDY";
         document.querySelector("#main-image").setAttribute("src", "img/img_06_windy.png");
-  }
+    }
   if(weatherSituation === "Tornado") {
     document.querySelector("#situation").innerHTML = "TORNADO";
         document.querySelector("#main-image").setAttribute("src", "img/img_06_windy.png");
@@ -125,15 +125,14 @@ document.querySelector("#main-image").setAttribute("src", "img/img_01_sunny.png"
   if(weatherSituation === "Snow") {
     document.querySelector("#situation").innerHTML = "SNOWY";
         document.querySelector("#main-image").setAttribute("src", "img/img_05_snowy.png");
-  }
+    }
   if(weatherSituation === "Rain") {
     document.querySelector("#situation").innerHTML = "RAINY";
     document.querySelector("#main-image").setAttribute("src", "img/img_04_rainy.png");
-  }
+}
   if(weatherSituation === "Drizzle") {
     document.querySelector("#situation").innerHTML = "DRIZZLY";
     document.querySelector("#main-image").setAttribute("src", "img/img_04_rainy.png");
-
   }
   if(weatherSituation === "Thunderstorm") {
     document.querySelector("#situation").innerHTML = "THUNDERSTORM";

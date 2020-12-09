@@ -102,7 +102,7 @@ h6 {
   font-size: 16px;
   margin-top: 0px;
 }
-.container {
+.containerSunny {
   margin-top: 10px;
   padding: 35px 35px 35px 35px;
   border-radius: 25px;
@@ -110,6 +110,56 @@ h6 {
   max-width: 500px;
   margin-bottom: 10px;
   background-image: linear-gradient(to top, #ff9a9e 0%, #f9df70 90%);
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+}
+.containerCloudy {
+  margin-top: 10px;
+  padding: 35px 35px 35px 35px;
+  border-radius: 25px;
+  align-items: center;
+  max-width: 500px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to top, #9fb8d1 0%, #b7b7b7 70%);
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+.containerPartlyCloudy {
+  margin-top: 10px;
+  padding: 35px 35px 35px 35px;
+  border-radius: 25px;
+  align-items: center;
+  max-width: 500px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to top, #ff9a9e 0%, #b7b7b7 70%);
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+.containerRaining {
+  margin-top: 10px;
+  padding: 35px 35px 35px 35px;
+  border-radius: 25px;
+  align-items: center;
+  max-width: 500px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-image: linear-gradient(to top, #9fb8d1 0%, #b7b7b7 70%);
+  margin-right: auto;
+  margin-left: auto;
+}
+.containerSnow {
+  margin-top: 10px;
+  padding: 35px 35px 35px 35px;
+  border-radius: 25px;
+  align-items: center;
+  max-width: 500px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to top, #9fb8d1 0%, #c7e3f9 70%);
+  margin-right: auto;
+  margin-left: auto;
   overflow: hidden;
 }
 .search-bar {
@@ -130,7 +180,7 @@ h6 {
   height: 30px;
   align-items: center;
   margin-left: 5px;
-  color: white;
+  color: #ffffff;
   background: #ff9a9e;
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
@@ -142,7 +192,7 @@ h6 {
 }
 .btn:hover {
   cursor: pointer;
-  background: white;
+  background: #ffffff;
   color: #ff9a9e;
   font-family: "Quicksand", sans-serif;
 }
