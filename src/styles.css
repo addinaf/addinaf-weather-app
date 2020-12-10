@@ -149,7 +149,7 @@ h6 {
   max-width: 500px;
   margin-bottom: 10px;
   overflow: hidden;
-  background-image: linear-gradient(to top, #b7b7b7 0%, #b7b7b7 70%);
+  background-image: linear-gradient(to top, #b7b7b7 0%, #9fb8d1 70%);
   margin-right: auto;
   margin-left: auto;
   transition: all 200ms fade-out 200ms;
@@ -170,9 +170,10 @@ h6 {
 .search-bar {
   display: flex;
   align-items: center;
+  max-width: 300px;
 }
 .form-control {
-  width: 350px;
+  width: 210px;
   border-radius: 8px;
   display: inline;
   height: 30px;
