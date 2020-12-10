@@ -202,14 +202,14 @@ searchForm.addEventListener("submit", handleSubmit);
 
 function displayForecast(response) {
 let forecastElement = document.querySelector("#forecast");
-let forecast = response.data.list[0];
+forecastElement.innerHTML = null;
+let forecast = null;
 
-forecastElement.innerHTML = `<div class="col-2"><h7>${formatHours(forecast.dt)}</h7></br><span class="icon-icon_02_cloudy"></span></br><h7>${Math.round(forecast.main.temp)}°</h7></div>`
+for (let index = 0; index < 6; index++) {
+forecast = response.data.list[index];
+forecastElement.innerHTML += `<div class="col-2"><h7>${formatHours(forecast.dt)}</h7></br><span class="icon-icon_02_cloudy"></span></br><h7>${Math.round(forecast.main.temp)}°</h7></div>`
 ;
-
-forecast = response.data.list[1];
-forecastElement.innerHTML = forecastElement.innerHTML += `<div class="col-2"><h7>${formatHours(forecast.dt)}</h7></br><span class="icon-icon_02_cloudy"></span></br><h7>${Math.round(forecast.main.temp)}°</h7></div>`
-;
+}
 }
 
 function searchCity(city) {
