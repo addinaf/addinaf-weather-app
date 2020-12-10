@@ -170,10 +170,10 @@ h6 {
 .search-bar {
   display: flex;
   align-items: center;
-  max-width: 300px;
+  max-width: 330px;
 }
 .form-control {
-  width: 210px;
+  width: 230px;
   border-radius: 8px;
   display: inline;
   height: 30px;

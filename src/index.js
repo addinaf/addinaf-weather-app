@@ -190,8 +190,10 @@ searchForm.addEventListener("submit", handleSubmit);
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+
   forecastElement.innerHTML =
-  '<div class="col-2"><h7>11</h7></br><span class="icon-icon_04_rainy"></span></br><h7>14°</h7></div>'
+  '<div class="col-2"><h7>11</h7></br><span class="icon-icon_04_rainy"></span></br><h7>${Math.round(forecast.main.temp)}°</h7></div>'
 }
 
 function searchCity(city) {
