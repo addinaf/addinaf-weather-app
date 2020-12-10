@@ -188,11 +188,20 @@ function handleSubmit(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML =
+  '<div class="col-2"><h7>11</h7></br><span class="icon-icon_04_rainy"></span></br><h7>14°</h7></div>'
+}
+
 function searchCity(city) {
   let units = "metric";
   let apiKey = "228eba262b4ca88b9a34ddd2463378be";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeather);
+
+  apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}';
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayFahrenheit(event) {
