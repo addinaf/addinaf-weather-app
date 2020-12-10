@@ -46,6 +46,18 @@ if (minutes < 10) {
 
 timeElement.innerHTML = `${hours}:${minutes}`;
 
+function formatHours(timestamp) {
+let hours = currentDay.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+let minutes = currentDay.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
+  return `${hours}`
+}
 // LOCATION FUNCTION
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name.toUpperCase();
@@ -189,11 +201,15 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 function displayForecast(response) {
-  let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
+let forecastElement = document.querySelector("#forecast");
+let forecast = response.data.list[0];
 
-  forecastElement.innerHTML =
-  '<div class="col-2"><h7>11</h7></br><span class="icon-icon_04_rainy"></span></br><h7>${Math.round(forecast.main.temp)}°</h7></div>'
+forecastElement.innerHTML = `<div class="col-2"><h7>${formatHours(forecast.dt)}</h7></br><span class="icon-icon_02_cloudy"></span></br><h7>${Math.round(forecast.main.temp)}°</h7></div>`
+;
+
+forecast = response.data.list[1];
+forecastElement.innerHTML = forecastElement.innerHTML + `<div class="col-2"><h7>${formatHours(forecast.dt)}</h7></br><span class="icon-icon_02_cloudy"></span></br><h7>${Math.round(forecast.main.temp)}°</h7></div>`
+;
 }
 
 function searchCity(city) {
@@ -202,7 +218,7 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeather);
 
-  apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}';
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
 
