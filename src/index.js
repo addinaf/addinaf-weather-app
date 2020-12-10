@@ -208,7 +208,7 @@ forecastElement.innerHTML = `<div class="col-2"><h7>${formatHours(forecast.dt)}<
 ;
 
 forecast = response.data.list[1];
-forecastElement.innerHTML = forecastElement.innerHTML + `<div class="col-2"><h7>${formatHours(forecast.dt)}</h7></br><span class="icon-icon_02_cloudy"></span></br><h7>${Math.round(forecast.main.temp)}°</h7></div>`
+forecastElement.innerHTML = forecastElement.innerHTML += `<div class="col-2"><h7>${formatHours(forecast.dt)}</h7></br><span class="icon-icon_02_cloudy"></span></br><h7>${Math.round(forecast.main.temp)}°</h7></div>`
 ;
 }
 
