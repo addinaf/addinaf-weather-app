@@ -47,12 +47,12 @@ if (minutes < 10) {
 timeElement.innerHTML = `${hours}:${minutes}`;
 
 function formatHours(timestamp) {
-  let time = new Date(timestamp);
-  let hours = time.getHours();
+  let date = new Date(timestamp);
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = time.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -207,10 +207,63 @@ forecastElement.innerHTML = null;
 let forecast = null;
 
 for (let index = 0; index < 6; index++) {
-forecast = response.data.list[index];
-forecastElement.innerHTML += `<div class="col-2"><h7>${formatHours(forecast.dt)}</h7></br><span class="icon-icon_02_cloudy"></span></br><h7>${Math.round(forecast.main.temp)}°</h7></div>`
-;
-}
+    forecast = response.data.list[index];
+    let weatherSituation = forecast.weather[0].main;
+    let icon = "";
+    if(weatherSituation === "Clear") {
+      icon = `<span class="icon-icon_01_sunny></span>`;
+    }
+    if (weatherSituation === "Clouds") {
+      icon = `<span class="icon-icon_02_cloudy"></span>`;;
+    }
+    if(weatherSituation === "Mist") {
+      icon = `<span class="icon-icon_02_cloudy"></span>`;
+    }
+    if(weatherSituation === "Smoke") {
+      icon = `<span class="icon-icon_02_cloudy"></span>`;
+    }
+    if(weatherSituation === "Haze") {
+      icon = `<span class="icon-icon_03_partly cloudy"></span>`;
+    }
+    if(weatherSituation === "Dust") {
+      icon = `<span class="icon-icon_03_partly cloudy"></span>`;
+    }
+    if(weatherSituation === "Fog") {
+      icon = `<span class="icon-icon_02_cloudy"></span>`;
+    }
+    if(weatherSituation === "Sand") {
+      icon = `<span class="icon-icon_03_partly cloudy"></span>`;
+    }
+    if(weatherSituation === "Dust") {
+        icon = `<span class="icon-icon_03_partly cloudy"></span>`;
+    }
+    if(weatherSituation === "Ash") {
+        icon = `<span class="icon-icon_03_partly cloudy"></span>`;
+    }
+    if(weatherSituation === "Squall") {
+      icon = `<span class="icon-icon_06_windy"></span>`;
+    }
+    if(weatherSituation === "Tornado") {
+      icon = `<span class="icon-icon_06_windy"></span>`;
+    }
+    if(weatherSituation === "Snow") {
+    icon = `<span class="icon-icon_05_snowy"></span>`;
+    }
+    if(weatherSituation === "Rain") {
+    icon = `<span class="icon-icon_04_rainy"></span>`;
+    }
+    if(weatherSituation === "Drizzle") {
+      icon = `<span class="icon-icon_04_rainy"></span>`;
+    }
+    if(weatherSituation === "Thunderstorm") {
+      icon = `<span class="icon-icon_04_rainy"></span>`;
+    }
+    forecastElement.innerHTML += `<div class="col-2"><h7>${formatHours(
+      forecast.dt * 1000
+    )}</h7></br>${icon}</br><h7>${Math.round(
+      forecast.main.temp
+    )}°</h7></div>`;
+  }
 }
 
 function searchCity(city) {
