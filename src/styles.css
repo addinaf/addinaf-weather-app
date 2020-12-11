@@ -82,7 +82,7 @@ h4 {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  margin-top: -100px;
+  margin-top: -80px;
 }
 ul {
   list-style-type: none;
@@ -93,14 +93,15 @@ h5 {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  margin-top: -100px;
+  margin-top: -80px;
 }
 h6 {
   color: #ffffff;
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  margin-top: -40px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 .containerSunny {
   margin-top: 10px;
@@ -213,8 +214,8 @@ h6 {
   position: relative;
   top: 0px;
 }
-.daily {
-  margin-top: 35px;
+.more-weather {
+  margin-top: 10px;
 }
 .col-2 {
   font-family: "Quicksand", sans-serif;

@@ -47,17 +47,18 @@ if (minutes < 10) {
 timeElement.innerHTML = `${hours}:${minutes}`;
 
 function formatHours(timestamp) {
-let hours = currentDay.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-let minutes = currentDay.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-
+  let time = new Date(timestamp);
+  let hours = time.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = time.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   return `${hours}`
 }
+
 // LOCATION FUNCTION
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name.toUpperCase();
