@@ -211,7 +211,7 @@ for (let index = 0; index < 6; index++) {
     let weatherSituation = forecast.weather[0].main;
     let icon = "";
     if(weatherSituation === "Clear") {
-      icon = `<span class="icon-icon_01_sunny></span>`;
+      icon = `<span class="icon-icon_01_sunny"></span>`;
     }
     if (weatherSituation === "Clouds") {
       icon = `<span class="icon-icon_02_cloudy"></span>`;;
